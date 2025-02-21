@@ -1,6 +1,7 @@
 # This is an official implementation of the paper LUV:A Few-shot Label Unlearning in Vertical Federated Learning
 
-## Datasets
+## Getting Start
+### Datasets
 Download the following datasets from the link provided.
 Place the datasets in the .\data directory.
 
@@ -11,8 +12,8 @@ Brain Tumor MRI: https://drive.google.com/drive/folders/1gFVOAGlUh-sCl-wbDzzrM9G
 Yahoo Answer : https://drive.google.com/drive/folders/1Frwb-ozdsDCSwUbGKuXsj5bCbd3hIp8K?usp=sharing
 
 
-## Commands to train VFL model:
-### CIFAR10 Resnet18
+### Commands to train VFL model:
+#### CIFAR10 Resnet18
 Train Full Model:
 ``` 
 python main.py
@@ -33,7 +34,7 @@ Train a retrain model in 4 labels unlearning scenario:
 python main.py --mode=retrain --unlearn_class_num=4
 ```
 
-### MNIST Resnet18:
+#### MNIST Resnet18:
 Train Full Model:
 ```
 python main.py --data=mnist
@@ -55,7 +56,7 @@ python main.py --data=mnist --mode=retrain --unlearn_class_num=4
 ```
 
 
-### CIFAR100 Resnet18:
+#### CIFAR100 Resnet18:
 Train Full Model:
 ```
 python main.py --data=cifar100 --num_classes=100
@@ -78,7 +79,7 @@ python main.py --data=cifar100 --num_classes=100 --mode=retrain --unlearn_class_
 ```
 
 
-### Yahoo Answer MixText
+#### Yahoo Answer MixText
 Train Full Model:
 ```
 python main.py --data=yahoo --model_type=mixtext --epochs=30
@@ -90,7 +91,7 @@ python main.py --data=yahoo --model_type=mixtext --epochs=20 --mode=retrain --un
 ```
 
 
-### ModelNet Resnet18:
+#### ModelNet Resnet18:
 Train Full Model:
 ```
 python main_modelnet.py --data=modelnet --num_classes=40
@@ -102,7 +103,7 @@ python main_modelnet.py --data=modelnet --num_classes=40 --mode=retrain
 ```
 
 
-### Brain MRI Resnet18:
+#### Brain MRI Resnet18:
 Train Full Model:
 ```
 python main.py --data=mri --num_classes=4
@@ -113,7 +114,7 @@ Train a retrain model in 1 label unlearning scenario:
 python main.py --data=mri --num_classes=4 --mode=retrain --unlearn_class=2
 ```
 
-### CIFAR10 VGG16
+#### CIFAR10 VGG16
 Train Full Model:
 ```
 python main.py --model_type=vgg16
@@ -136,7 +137,7 @@ python main.py --mode=retrain --unlearn_class_num=4 --model_type=vgg16
 ```
 
 
-### CIFAR100 VGG16:
+#### CIFAR100 VGG16:
 Train Full Model:
 ```
 python main.py --data=cifar100 --num_classes=100 --model_type=vgg16
@@ -157,5 +158,7 @@ Train a retrain model in 4 labels unlearning scenario:
 python main.py --data=cifar100 --num_classes=100 --mode=retrain --unlearn_class_num=4 --model_type=vgg16
 ```
 
+### Before running the command for unlearning, change the saved model path directory in the torch.load() code from the unlearn python file.
+### Command for unlearning
 
 

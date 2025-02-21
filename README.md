@@ -78,7 +78,6 @@ Train a retrain model in 4 labels unlearning scenario:
 python main.py --data=cifar100 --num_classes=100 --mode=retrain --unlearn_class_num=4
 ```
 
-
 #### Yahoo Answer MixText
 Train Full Model:
 ```
@@ -90,7 +89,6 @@ Train a retrain model:
 python main.py --data=yahoo --model_type=mixtext --epochs=20 --mode=retrain --unlearn_class=6
 ```
 
-
 #### ModelNet Resnet18:
 Train Full Model:
 ```
@@ -101,7 +99,6 @@ Train a retrain model in 1 label unlearning scenario:
 ```
 python main_modelnet.py --data=modelnet --num_classes=40 --mode=retrain
 ```
-
 
 #### Brain MRI Resnet18:
 Train Full Model:
@@ -161,4 +158,33 @@ python main.py --data=cifar100 --num_classes=100 --mode=retrain --unlearn_class_
 ### Before running the command for unlearning, change the saved model path directory in the torch.load() code from the unlearn python file.
 ### Command for unlearning
 
+#### MNIST Resnet18:
+```
+python unlearn.py --data=mnist --model_type=resnet18 --unlearn_lr=2e-7 --unlearn_epochs=10 --unlearn_samples=40
+```
+
+#### CIFAR10 Resnet18:
+```
+python unlearn.py
+```
+
+#### CIFAR100 Resnet18:
+```
+python unlearn.py --data=cifar100 --model_type=resnet18 --unlearn_lr=5e-7 --unlearn_epochs=7 --unlearn_samples=30
+```
+
+#### ModelNet Resnet18:
+```
+python unlearn_modelnet.py --unlearn_method=LUV_modelnet --unlearn_lr=5e-07 --unlearn_samples=30 --unlearn_epochs=4
+```
+
+#### Brain Tumor MRI Resnet18:
+```
+python unlearn.py --data=mri --model_type=resnet18 --unlearn_method=LUV --unlearn_epochs=4 --unlearn_samples=15 --unlearn_lr=6e-6 --unlearn_class=2
+```
+
+#### Yahoo Answer MixText:
+```
+python unlearn.py --data=yahoo --model_type=mixtext --unlearn_method=LUV --unlearn_class=6 --unlearn_lr=7e-07 --unlearn_samples=28 --unlearn_epochs=4
+```
 

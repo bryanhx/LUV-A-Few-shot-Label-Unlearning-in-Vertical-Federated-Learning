@@ -189,3 +189,35 @@ python unlearn.py --data=mri --model_type=resnet18 --unlearn_method=LUV --unlear
 python unlearn.py --data=yahoo --model_type=mixtext --unlearn_method=LUV --unlearn_class=6 --unlearn_lr=7e-07 --unlearn_samples=28 --unlearn_epochs=4
 ```
 
+### 2 labels unlearning
+
+#### CIFAR10 Resnet18:
+```
+python unlearn_2labels.py --data=cifar10 --model_type=resnet18 --unlearn_lr=1e-6 --unlearn_epochs=15 --unlearn_samples=40
+```
+
+#### CIFAR100 Resnet18:
+```
+python unlearn_2labels.py --data=cifar100 --model_type=resnet18 --unlearn_lr=9e-7 --unlearn_epochs=10 --unlearn_samples=20
+```
+
+#### CIFAR10 VGG16:
+```
+python unlearn_2labels.py --data=cifar10 --model_type=vgg16 --unlearn_lr=1e-6 --unlearn_epochs=15 --unlearn_samples=40
+```
+
+#### CIFAR100 VGG16:
+```
+python unlearn_2labels.py --data=cifar100 --model_type=vgg16 --unlearn_lr=9e-7 --unlearn_epochs=5 --unlearn_samples=20
+```
+
+### 4 labels unlearning
+#### CIFAR100 Resnet18:
+```
+python unlearn_4labels.py --data=cifar100 --model_type=resnet18 --unlearn_lr=3e-6 --unlearn_epochs=20 --unlearn_samples=15
+```
+
+#### CIFAR100 VGG16:
+```
+python unlearn_4labels.py --data=cifar100 --model_type=vgg16 --unlearn_lr=1e-6 --unlearn_epochs=15 --unlearn_samples=15
+```

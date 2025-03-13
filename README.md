@@ -157,6 +157,7 @@ python main.py --data=cifar100 --num_classes=100 --mode=retrain --unlearn_class_
 
 ### Before running the command for unlearning, change the saved model path directory in the torch.load() code from the unlearn python file.
 ### Command for unlearning
+Before running the unlearning Python files, ensure you update the model path in the `torch.load()` code to point to your saved directory in the following files: `unlearn.py`, `unlearn_modelnet.py`, `unlearn_2labels.py`, and `unlearn_4labels.py`.
 ### 1 label unlearning
 
 #### MNIST Resnet18:

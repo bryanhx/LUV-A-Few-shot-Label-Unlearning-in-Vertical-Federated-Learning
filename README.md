@@ -1,6 +1,12 @@
 # This is an official implementation of the paper [LUV:A Few-shot Label Unlearning in Vertical Federated Learning](https://arxiv.org/abs/2410.10922)
 
 ## Getting Start
+### Environment
+Create a conda environment with the following LUV_requirement.txt file
+```
+conda create -n <environment-name> --file LUV_requirement.txt
+```
+
 ### Datasets
 Download the following datasets from the link provided.
 Place the datasets in the .\data directory.

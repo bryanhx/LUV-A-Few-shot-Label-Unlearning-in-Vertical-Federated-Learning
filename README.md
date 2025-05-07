@@ -11,7 +11,7 @@ conda create -n <environment-name> --file LUV_requirement.txt
 Download the following datasets from the link provided.
 Place the datasets in the .\data directory.
 
-//ModelNet: https://drive.google.com/drive/folders/14WZ7oaobP4STJkhHDWLHo6LDd9U994FX?usp=sharing
+<!--- ModelNet: https://drive.google.com/drive/folders/14WZ7oaobP4STJkhHDWLHo6LDd9U994FX?usp=sharing -->
 
 Brain Tumor MRI: https://drive.google.com/drive/folders/1gFVOAGlUh-sCl-wbDzzrM9G_2UwtMCHB?usp=sharing
 
